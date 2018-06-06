@@ -53,3 +53,5 @@ nb-configuration.xml
 release.properties
 pom.xml.releaseBackup
 pom.xml.tag
+out/artifacts/Hmm_jar/Hmm.jar
+out/production/Hmm/libs/Math.jar
