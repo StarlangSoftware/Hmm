@@ -10,7 +10,6 @@ public class TestHmm {
         ArrayList<String>[] observations;
         ArrayList<Integer>[] emittedSymbols;
         HashSet<String> states = new HashSet<String>();
-        HashSet<Integer> symbols = new HashSet<Integer>();
         ArrayList<Integer> observed = new ArrayList<Integer>();
         observed.add(1);
         observed.add(1);
@@ -20,9 +19,6 @@ public class TestHmm {
         observed.add(1);
         states.add("HOT");
         states.add("COLD");
-        symbols.add(1);
-        symbols.add(2);
-        symbols.add(3);
         observations = new ArrayList[observationCount];
         emittedSymbols = new ArrayList[observationCount];
         for (int i = 0; i < observationCount; i++){
