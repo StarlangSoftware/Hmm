@@ -35,11 +35,7 @@ public class HmmState<State, Symbol> implements Serializable {
      * @return Emission probability for a specific symbol.
      */
     public double getEmitProb(Symbol symbol){
-        if (emissionProbabilities.containsKey(symbol)){
-            return emissionProbabilities.get(symbol);
-        } else {
-            return 0.0;
-        }
+        return emissionProbabilities.getOrDefault(symbol, 0.0);
     }
 
 }
