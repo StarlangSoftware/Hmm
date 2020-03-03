@@ -1,6 +1,8 @@
 # Hmm
 For Developers
 ============
+You can also see either [Python](https://github.com/olcaytaner/Hmm-Py) 
+or [C++](https://github.com/olcaytaner/Hmm-CPP) repositories.
 
 ## Requirements
 
