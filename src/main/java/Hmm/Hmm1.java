@@ -90,7 +90,7 @@ public class Hmm1<State, Symbol> extends Hmm<State,Symbol> implements Serializab
         gamma = new Matrix(sequenceLength, stateCount);
         phi = new Matrix(sequenceLength, stateCount);
         qs = new Vector(sequenceLength, 0);
-        result = new ArrayList<State>();
+        result = new ArrayList<>();
         /*Initialize*/
         emission = s.get(0);
         for (i = 0; i < stateCount; i++){
