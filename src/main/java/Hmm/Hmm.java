@@ -82,7 +82,7 @@ public abstract class Hmm<State, Symbol> implements Serializable {
      * the function returns -Infinity.
      *
      * @param x Input number
-     * @return the logarithm of x. If x < 0 return -infinity.
+     * @return the logarithm of x. If x less than 0 return -infinity.
      */
     protected double safeLog(double x){
         if (x <= 0){
