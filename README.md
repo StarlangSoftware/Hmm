@@ -75,19 +75,29 @@ Use below line to generate jar file:
 
      mvn install
 
-
-
-------------------------------------------------
-
-Hmm
-============
-+ [Maven Usage](#maven-usage)
-
-
-### Maven Usage
+## Maven Usage
 
 	<dependency>
   	<groupId>NlpToolkit</groupId>
   	<artifactId>Hmm</artifactId>
   	<version>1.0.0</version>
 	</dependency>
+
+
+------------------------------------------------
+
+Detailed Description
+============
++ [Hmm](#hmm)
+
+## Hmm
+
+Hmm modelini üretmek için
+
+	Hmm(Set<State> states, ArrayList<State>[] observations, ArrayList<Symbol>[] emittedSymbols)
+
+
+Viterbi algoritması ile en olası State listesini elde etmek için
+
+	ArrayList<State> viterbi(ArrayList<Symbol> s)
+
