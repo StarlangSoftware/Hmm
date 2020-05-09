@@ -1,8 +1,8 @@
 # Hmm
+
 For Developers
 ============
-You can also see either [Python](https://github.com/olcaytaner/Hmm-Py) 
-or [C++](https://github.com/olcaytaner/Hmm-CPP) repositories.
+You can also see [Python](https://github.com/starlangsoftware/Hmm-Py), [C++](https://github.com/starlangsoftware/Hmm-CPP),  or [C#](https://github.com/starlangsoftware/Hmm-CS) repository.
 
 ## Requirements
 
@@ -77,11 +77,11 @@ Use below line to generate jar file:
 
 ## Maven Usage
 
-	<dependency>
-  	<groupId>NlpToolkit</groupId>
-  	<artifactId>Hmm</artifactId>
-  	<version>1.0.0</version>
-	</dependency>
+        <dependency>
+            <groupId>io.github.starlangsoftware</groupId>
+            <artifactId>Hmm</artifactId>
+            <version>1.0.0</version>
+        </dependency>
 
 
 ------------------------------------------------
