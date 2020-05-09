@@ -1,29 +1,27 @@
 package Hmm;
 
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 
-public class TestHmm {
+import static org.junit.Assert.*;
 
-    public static void hmm1(){
+public class Hmm2Test {
+
+    @Test
+    public void testViterbi() {
         int observationCount = 5;
         ArrayList<String>[] observations;
         ArrayList<Integer>[] emittedSymbols;
-        HashSet<String> states = new HashSet<String>();
-        ArrayList<Integer> observed = new ArrayList<Integer>();
-        observed.add(1);
-        observed.add(1);
-        observed.add(1);
-        observed.add(1);
-        observed.add(1);
-        observed.add(1);
+        HashSet<String> states = new HashSet<>();
         states.add("HOT");
         states.add("COLD");
         observations = new ArrayList[observationCount];
         emittedSymbols = new ArrayList[observationCount];
         for (int i = 0; i < observationCount; i++){
-            observations[i] = new ArrayList<String>();
-            emittedSymbols[i] = new ArrayList<Integer>();
+            observations[i] = new ArrayList<>();
+            emittedSymbols[i] = new ArrayList<>();
         }
         observations[0].add("HOT");
         observations[0].add("HOT");
@@ -67,11 +65,34 @@ public class TestHmm {
         emittedSymbols[4].add(3);
         emittedSymbols[4].add(2);
         emittedSymbols[4].add(1);
-        Hmm<String, Integer> hmm = new Hmm2<String, Integer>(states, observations, emittedSymbols);
-        ArrayList<String> observedStates = hmm.viterbi(observed);
-    }
-
-    public static void main(String[] args){
-        hmm1();
+        Hmm<String, Integer> hmm2 = new Hmm2<>(states, observations, emittedSymbols);
+        ArrayList<Integer> observed = new ArrayList<>();
+        observed.add(1);
+        observed.add(1);
+        observed.add(1);
+        observed.add(1);
+        observed.add(1);
+        observed.add(1);
+        ArrayList<String> observedStates = hmm2.viterbi(observed);
+        assertEquals("COLD", observedStates.get(0));
+        assertEquals("COLD", observedStates.get(1));
+        assertEquals("COLD", observedStates.get(2));
+        assertEquals("COLD", observedStates.get(3));
+        assertEquals("COLD", observedStates.get(4));
+        assertEquals("COLD", observedStates.get(5));
+        observed = new ArrayList<>();
+        observed.add(3);
+        observed.add(3);
+        observed.add(3);
+        observed.add(3);
+        observed.add(3);
+        observed.add(3);
+        observedStates = hmm2.viterbi(observed);
+        assertEquals("HOT", observedStates.get(0));
+        assertEquals("HOT", observedStates.get(1));
+        assertEquals("HOT", observedStates.get(2));
+        assertEquals("HOT", observedStates.get(3));
+        assertEquals("HOT", observedStates.get(4));
+        assertEquals("HOT", observedStates.get(5));
     }
 }
