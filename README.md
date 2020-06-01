@@ -1,5 +1,3 @@
-# Hmm
-
 For Developers
 ============
 You can also see [Python](https://github.com/starlangsoftware/Hmm-Py), [C++](https://github.com/starlangsoftware/Hmm-CPP),  or [C#](https://github.com/starlangsoftware/Hmm-CS) repository.
@@ -82,22 +80,3 @@ Use below line to generate jar file:
             <artifactId>Hmm</artifactId>
             <version>1.0.0</version>
         </dependency>
-
-
-------------------------------------------------
-
-Detailed Description
-============
-+ [Hmm](#hmm)
-
-## Hmm
-
-Hmm modelini üretmek için
-
-	Hmm(Set<State> states, ArrayList<State>[] observations, ArrayList<Symbol>[] emittedSymbols)
-
-
-Viterbi algoritması ile en olası State listesini elde etmek için
-
-	ArrayList<State> viterbi(ArrayList<Symbol> s)
-
