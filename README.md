@@ -1,5 +1,10 @@
-Hidden Markov Models [<img src=video1.jpg width="5%">](https://youtu.be/zHj5mK3jcyk)[<img src=video2.jpg width="5%">](https://youtu.be/LM0ld3UKCEs)
+Hidden Markov Models
 ============
+
+Video Lectures
+============
+
+[<img src=video1.jpg width="50%">](https://youtu.be/zHj5mK3jcyk)[<img src=video2.jpg width="50%">](https://youtu.be/LM0ld3UKCEs)
 
 For Developers
 ============
