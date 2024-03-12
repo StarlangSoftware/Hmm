@@ -93,7 +93,7 @@ public class Hmm2<State, Symbol> extends Hmm<State,Symbol> implements Serializab
         gamma = new Matrix(sequenceLength, stateCount * stateCount);
         phi = new Matrix(sequenceLength, stateCount * stateCount);
         qs = new Vector(sequenceLength, 0);
-        result = new ArrayList<State>();
+        result = new ArrayList<>();
         /*Initialize*/
         emission1 = s.get(0);
         emission2 = s.get(1);
@@ -111,7 +111,7 @@ public class Hmm2<State, Symbol> extends Hmm<State,Symbol> implements Serializab
                 try {
                     previous = gamma.getRow(t - 1).skipVector(stateCount, j / stateCount);
                     current.add(previous);
-                } catch (VectorSizeMismatch vectorSizeMismatch) {
+                } catch (VectorSizeMismatch ignored) {
                 }
                 maxIndex = current.maxIndex();
                 observationLikelihood = states[j % stateCount].getEmitProb(emission);

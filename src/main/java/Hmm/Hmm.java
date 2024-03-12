@@ -31,7 +31,7 @@ public abstract class Hmm<State, Symbol> implements Serializable {
         int i = 0;
         stateCount = states.size();
         this.states = new HmmState[stateCount];
-        stateIndexes = new HashMap<State, Integer>();
+        stateIndexes = new HashMap<>();
         for (State state : states){
             stateIndexes.put(state, i);
             i++;
@@ -105,8 +105,7 @@ public abstract class Hmm<State, Symbol> implements Serializable {
             outFile = new FileOutputStream(fileName);
             outObject = new ObjectOutputStream (outFile);
             outObject.writeObject(this);
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (IOException ignored) {
         }
     }
 

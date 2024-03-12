@@ -4,8 +4,8 @@ import java.io.Serializable;
 import java.util.HashMap;
 
 public class HmmState<State, Symbol> implements Serializable {
-    private HashMap<Symbol, Double> emissionProbabilities;
-    private State state;
+    private final HashMap<Symbol, Double> emissionProbabilities;
+    private final State state;
 
     /**
      * A constructor of {@link HmmState} class which takes a {@link State} and emission probabilities as inputs and

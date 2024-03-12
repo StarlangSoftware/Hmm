@@ -104,7 +104,7 @@ public class Hmm1<State, Symbol> extends Hmm<State,Symbol> implements Serializab
                 tempArray = logOfColumn(j);
                 try {
                     tempArray.add(gamma.getRow(t - 1));
-                } catch (VectorSizeMismatch vectorSizeMismatch) {
+                } catch (VectorSizeMismatch ignored) {
                 }
                 maxIndex = tempArray.maxIndex();
                 observationLikelihood = states[j].getEmitProb(emission);
